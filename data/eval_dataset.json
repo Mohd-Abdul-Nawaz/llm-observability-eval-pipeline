@@ -1,0 +1,31 @@
+{
+  "name": "research-qa-eval-dataset",
+  "version": "1.0",
+  "description": "Ground-truth evaluation dataset for the agentic research assistant",
+  "examples": [
+    {
+      "id": "example-001",
+      "question": "What is LangGraph?",
+      "context": "LangGraph is a library for building stateful, multi-agent applications with LLMs.",
+      "ground_truth": "LangGraph is a library for building stateful, multi-agent applications using LLMs, featuring checkpoints and human-in-the-loop.",
+      "expected_tools": ["web_search"],
+      "metrics": ["correctness", "task_completion"]
+    },
+    {
+      "id": "example-002",
+      "question": "What is MCP?",
+      "context": "MCP (Model Context Protocol) is an open protocol for connecting AI agents to external tools and data sources.",
+      "ground_truth": "MCP standardizes how AI agents connect to external systems, enabling tool discovery, permissions, and secure execution.",
+      "expected_tools": ["web_search", "document_retrieval"],
+      "metrics": ["correctness", "hallucination"]
+    },
+    {
+      "id": "example-003",
+      "question": "How does LLM-as-a-Judge work?",
+      "context": "LLM-as-a-Judge uses a powerful LLM to evaluate the outputs of another model based on defined criteria.",
+      "ground_truth": "A judge LLM scores outputs on criteria like correctness, helpfulness, and safety, providing scalable evaluation.",
+      "expected_tools": [],
+      "metrics": ["correctness", "consistency"]
+    }
+  ]
+}
